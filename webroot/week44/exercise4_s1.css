@@ -1,0 +1,73 @@
+
+#background{
+background-color: grey;
+border:solid grey 5px;
+/* this will change the background color*/
+}
+h1{
+font-size:30pt;
+font-family: Helvetica;
+}
+#body{
+background-color: white;
+}
+table{
+margin: 10pt 10pt 10pt 10pt;
+
+}
+hgroup{
+background-color:#339966;
+color: white;
+font-family: Helvetica;
+}
+
+#links{
+color:#ff00ff;
+font-size: 20pt;
+font-family: Helvetica;
+}
+#links2{
+color:#ff00ff;
+font-size: 20pt;
+font-family: Helvetica;
+}
+#link{
+background-color:#669966;
+color: white;
+font-family: Helvetica;
+}
+#break{
+background-color:grey;
+}
+#break2{
+background-color:grey;
+}
+
+[title]{
+border:solid grey 5px;
+padding:0.3em;
+}
+#figurecaption{
+color:grey;
+
+}
+h4{
+border-bottom: 2pt solid grey;
+}
+
+paragraph{
+
+font-family: arial;
+
+
+}
+#miniheader{
+font-family: Helvetica;
+font-size: 20pt;
+}
+
+footer{
+background-color:#339966;
+color:white;}
+#final{
+color:#ff00ff;}

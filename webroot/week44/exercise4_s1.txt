@@ -1,0 +1,46 @@
+
+#background{
+background-color: grey;
+}
+#body{
+background-color: white;
+}
+hgroup{
+background-color:#339966;
+color: white;
+font-family: Helvetica;
+}
+
+#links{
+color:yellow;
+font-family: Helvetica;
+}
+#link{
+background-color:#669966;
+color: white;
+font-family: Helvetica;
+}
+#break{
+background-color:grey;
+}
+
+
+#idpic{
+height:100px;
+width:100px;
+border10px;
+border-color:grey;
+border-style:solid;
+
+}
+h4{
+border-bottom: 2px solid grey
+}
+#miniheader{
+font-family: Helvetica;
+}
+
+footer{
+background-color:#339966;}
+#final{
+color:yellow;}
