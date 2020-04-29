@@ -1,9 +1,0 @@
-html, body, div, h1, h2, h3, h4, h5, p, aside, nav
-header, hgroup, li, ul, main, aside, article, section, figure, 
-figurecaption, footer{
- margin: 0;
- padding: 0;
- border: 0;
- font-size: 100%;
- vertical-align: baseline;
-}
