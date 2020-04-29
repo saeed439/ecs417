@@ -1,0 +1,148 @@
+ <!doctype html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="reset.css" type="text/css" />
+<link rel="stylesheet" href="tpc4.css" type="text/css" />
+</head>
+
+
+<body>
+<h1 id="legend">Shirt Order Form </h1>
+<section>
+<form method="POST" action="http://webprojects.eecs.qmul.ac.uk/un300/week4/week4_process.php">
+
+<fieldset>
+<section id="section1">
+
+<p>
+<legend>Shirt size:</legend>
+<div>
+<select name="select">
+	<option> Choose size </option>
+	<option>XS</option>
+	<option>S</option>
+	<option>M</option>
+	<option>L</option>
+	<option>XL</option>
+</div>
+</select>
+</p>
+<p>
+<label>Sleeves</label>
+<div>
+<div>
+
+short<input type="radio" name="shortorlong" value="short">
+</div>
+<div>
+long
+<input type="radio" name="shortorlong" value="long"> 
+</div>
+</div>
+</p>
+<p>
+<label>Choose shirt color</label>
+<div>
+<input type="color" name="colorchoice">
+</div>
+</p>
+<p>
+<label for="quantity">Quantity</label>
+<div>
+<input type="number" name="quantity" id="quantity" min="1" max="10">
+</div>
+</p>
+<p>
+<label for="requestdate">Date Requested</label>
+<div>
+<input type="date" name="requestdate">
+</div>
+</p>
+</section>
+<section id="section2">
+<p>
+<label for="name">Name</label>
+<div>
+<input type="text" name="name">
+</div>
+</p>
+<p>
+<label for="email">Email Address</label>
+<div>
+<input type="email" name="email" id="email" required>
+</div>
+</p>
+<p>
+<label for="phone">Telephone Number</label>
+<div>
+<input type="number" name="phone"> 
+&nbsp; Example: 44-207-882-1234
+</div>
+</p>
+</section>
+<section id="section3">
+<p>
+<label for="address">Address</label>
+<div>
+<textarea rows="1"> </textarea>
+</div>
+</p>
+<p>
+<label for="city">City</label>
+<div>
+<input type="text" name="city" id="city" list="citylist">
+<datalist id="citylist">
+<optgroup>
+<option>London</option>
+<option>Birmingham</option>
+<option>Manchester</option>
+<option>Glasgow</option> 
+</optgroup>
+</datalist>
+</div>
+</p>
+<p>
+<label for="postcode">Postcode</label>
+<div>
+<input type="text" name="postcode">
+</div>
+</p>
+</section>
+<section id="section4">
+<p>
+Please keep me informed about future shirt designs
+<input type="checkbox" name="checkbox "value="on">
+</p>
+<p>
+<section id="buttons">
+<input type="submit" value="Submit" id="button">
+<input type="reset" value="Reset" id="button">
+</section>
+</p>
+</section>
+
+
+
+
+
+</section>
+
+</fieldset>
+</form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
