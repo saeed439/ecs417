@@ -26,19 +26,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
  if ($conn->query($sql) == TRUE){
   echo "<h2>succesful post<h2> 
-  <p><a href='exercise2topic5.html'>HOME</a></p>"
-;
+  <p><a href='exercise2topic5.html'>HOME</a></p>";
 
 }
 else {
 
-  echo "Error: " . $sql . "<br>" . $conn->error;}
+  echo "Error: " . $sql . "<br>" . $conn->error;  
+
 }
+
 
 
  $conn->close();
 
-}
+
 
 ?>
 
