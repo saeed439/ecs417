@@ -1,12 +1,13 @@
 <?php 
-$dbhost= getenv("");
- $dbport= getenv("");
- $dbuser= getenv("user");
- $password= getenv("password");
- $db= getenv("ecs417");
+ 
+ $dbhost= getenv("MYSQL_SERVICE_HOST");
+ $dbport= getenv("MYSQL_SERVICE_PORT");
+ $dbuser= getenv("DATABASE_USER");
+ $password= getenv("DATABASE_PASSWORD");
+ $dbname= getenv("DATABASE_NAME");
 
- //create connection
- $conn = new mysqli($dbhost, $dbuser, $dbuser, $dbname);
+ 
+ $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
  if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);
 
@@ -35,9 +36,9 @@ else {
 }
 
 
+ $conn->close();
 
-
-
+}
 
 ?>
 
