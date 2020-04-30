@@ -19,21 +19,8 @@ $comment=$_POST["comment"];
 
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-  $sql = "INSERT INTO COMMENTSECTION (title, comment, date, time)
-  VALUES('$title', '$comment', '$time', '$date')";
-
- if ($conn->query($sql) == TRUE){
   echo "<h2>succesful post<h2> 
   <p><a href='exercise2topic5.html'>HOME</a></p>";
-
-}
-else {
-
-  echo "Error: " . $sql . "<br>" . $conn->error;  
-
-}
 
 
 
