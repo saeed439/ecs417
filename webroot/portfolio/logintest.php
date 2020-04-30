@@ -1,17 +1,15 @@
 <?php
 
- $dbhost= getenv("");
- $dbport= getenv("");
- $dbuser= getenv("user");
- $password= getenv("password");
- $db= getenv("ecs417");
+ $dbhost= "localhost";
+ 
+ $dbuser= "root";
+ $password= "";
+ $db= "login";
 
- //create connection
- $conn = new mysqli($dbhost, $dbuser, $dbuser, $dbname);
- //if ($conn->connect_error){
-      die("connection failed: " . $conn->connect_error);
 
-}
+ mysql_connect($host,$user,$password);
+ mysql_select_db($db);
+ 
 
 
 
@@ -19,7 +17,7 @@
 
   $user=$_POST['username'];
   $password=$_POST['password'];
-  $sql="select * from ecs417 where User='".$user."'AND Pass='".$password."'
+  $sql="select * from loginform where User='".$user."'AND Pass='".$password."'
   limit 1";
   $result=mysql_query($sql);
 
@@ -28,7 +26,7 @@
    exit();
 }
   else{ 
-   echo " you havent logged in";
+   echo " you haven not logged in";
    exit();
 }
 
