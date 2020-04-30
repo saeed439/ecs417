@@ -23,7 +23,7 @@
  $db= getenv("ecs417");
 
  
- $conn = new mysqli($dbuser, $dbuser, $dbname);
+ $conn = new mysqli($db, $dbuser, $password);
    if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);}
 
