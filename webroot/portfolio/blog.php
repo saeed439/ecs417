@@ -21,11 +21,9 @@
  $dbhost= getenv("MYSQL_SERRVICE_HOST");
  $dbport= getenv("MYSQL_SERRVICE_PORT");
  $dbuser= getenv("DATABASE_USER");
- $password= getenv("DATABASE_PASSWORD");
+ $password=getenv("DATABASE_PASSWORD");
  $dbname= getenv("DATABASE_NAME");
-
- //create connection
- $conn = new mysqli($dbhost,$dbuser, $password, $dbname);
+ $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
 if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);}
 
