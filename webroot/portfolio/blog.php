@@ -18,13 +18,15 @@
    <th>time</th>
  </tr>
 <?php
- $dbuser= getenv("user");
- $password= getenv("password");
- $db= getenv("ecs417");
+ $dbhost= getenv("MYSQL_SERRVICE_HOST");
+ $dbport= getenv("MYSQL_SERRVICE_PORT");
+ $dbuser= getenv("DATABASE_USER");
+ $password= getenv("DATABASE_PASSWORD");
+ $dbname= getenv("DATABASE_NAME");
 
- 
- $conn = new mysqli($db, $dbuser, $password);
-   if ($conn->connect_error){
+ //create connection
+ $conn = new mysqli($dbhost,$dbuser, $password, $dbname);
+if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);}
 
   $sql="SELECT ID, title, comment, date, time from COMMENTSECTION";
