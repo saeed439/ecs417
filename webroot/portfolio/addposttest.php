@@ -7,7 +7,7 @@ $dbhost= getenv("");
 
  //create connection
  $conn = new mysqli($dbhost, $dbuser, $dbuser, $dbname);
- //if ($conn->connect_error){
+ if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);
 
 }
