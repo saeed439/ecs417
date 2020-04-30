@@ -17,7 +17,7 @@
    <th>date</th>
    <th>time</th>
  </tr>
-<?php>
+<?php
  $dbuser= getenv("user");
  $password= getenv("password");
  $db= getenv("ecs417");
