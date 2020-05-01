@@ -20,15 +20,12 @@ $comment=$_POST['comment'];
 $sql = "INSERT INTO COMMENTSECTION (title, comment, date, time)
           VALUES ('$title' , '$comment' , '$date' , '$time')";
 
-  if ($conn-> mysqli_query($conn,$sql)===TRUE) {
-    echo "NEW COMMENT added";
+ 
+  echo "NEW COMMENT added";
 
-}
 
-  else {
 
-    echo "Error: " . $sql. "<br>" . $conn-> error;
-}
+  
 
 
   
