@@ -63,7 +63,7 @@ if ($resultSet->num_rows >0){
 }
 
 
-else { echo "no records returned."}
+else { echo "no records returned.";}
 
 
 ?>
