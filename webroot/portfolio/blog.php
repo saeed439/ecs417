@@ -28,7 +28,7 @@ if ($conn->connect_error){
     $sort= 'DESC';
 }
 
-$resultSet = $mysqli->query(SELECT * FROM COMMENTary ORDER BY $order $sort");
+$resultSet = $mysqli->query("SELECT * FROM COMMENTary ORDER BY $order $sort");
 
 if ($resultSet->num_rows >0){
 
