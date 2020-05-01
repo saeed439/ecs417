@@ -26,11 +26,11 @@
   $result = mysqli_query($conn,$sql);
 
   if(mysqli_num_rows($result)==1){ 
-   echo " you logged in ";
+   header('Location:addposttest.php');
    exit();
 }
   else{ 
-   echo " you haven not logged in";
+   header('Location:logintest.php');
    exit();
 }
 
