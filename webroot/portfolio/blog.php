@@ -26,7 +26,7 @@
       die("connection failed: " . $conn->connect_error);
 
                            }
-  $sql = "SELECT title, comment, date from COMMENTary order by id desc");
+  $sql = "SELECT title, comment, date from COMMENTary order by id desc";
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
