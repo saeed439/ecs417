@@ -47,7 +47,7 @@ if ($resultSet->num_rows >0){
 
     $title=$rows['title'];
     $comment= $rows['comment'];
-    $date= $['date'];
+    $date= $rows['date'];
 
    echo"
 
