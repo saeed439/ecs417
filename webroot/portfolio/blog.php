@@ -30,7 +30,7 @@
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>"$. row["date"] ."</td></tr>";
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
 }
 
 echo "</table>";
