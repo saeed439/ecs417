@@ -11,7 +11,7 @@
  if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);
 
-}
+                           }
 $time= date("H:i");
 $date= date('m-d-y');
 $title=$_POST['title'];
@@ -20,7 +20,7 @@ $comment=$_POST['comment'];
 $sql = "INSERT INTO COMMENTSECTION (title, comment, date, time)
           VALUES ('$title' , '$comment' , '$date' , '$time')";
 
-  if ($conn->querry($aql)===TRUE {
+  if ($conn->querry($aql)===TRUE) {
     echo "NEW COMMENT added";
 
 }
