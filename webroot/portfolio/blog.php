@@ -1,16 +1,20 @@
 <?php
-
- $dbhost= getenv("MYSQL_SERRVICE_HOST");
- $dbport= getenv("MYSQL_SERRVICE_PORT");
+ $dbhost= getenv("MYSQL_SERVICE_HOST");
+ $dbport= getenv("MYSQL_SERVICE_PORT");
  $dbuser= getenv("DATABASE_USER");
- $password=getenv("DATABASE_PASSWORD");
+ $password= getenv("DATABASE_PASSWORD");
  $dbname= getenv("DATABASE_NAME");
+
+ 
  $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
-if ($conn->connect_error){
-      die("connection failed: " . $conn->connect_error);}
+ if ($conn->connect_error){
+      die("connection failed: " . $conn->connect_error);
+
+                           }
 
 
-  if(isset($_get['sort'])){
+
+  if(isset($_GET['sort'])){
 
   $order = $_GET['order'];
 
