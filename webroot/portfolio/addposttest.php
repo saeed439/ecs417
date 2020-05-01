@@ -27,7 +27,7 @@ $sql = "INSERT INTO COMMENTSECTION (title, comment, date, time)
 
   else {
 
-    echo "Error: " . $sql. "<br>" .
+    echo "Error: " . $sql. "<br>" . $conn-> error;
 }
 
 
