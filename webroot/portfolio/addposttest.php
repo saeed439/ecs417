@@ -22,8 +22,8 @@
    $title=$_POST['title'];
    $comment=$_POST['comment'];
 
-$sql =  mysqli_query($conn,"INSERT into COMMENTSECTION
-          values ('', '$title' , '$comment' , 'date('m-d-y')' , 'date('H:i')')");
+$sql =  mysqli_query($conn,"INSERT INTO COMMENTSECTION (title, comment,)
+          VALUES ('$title' , '$comment')");
 
  if ($sql){
 
