@@ -32,7 +32,7 @@
     $sort= 'DESC';
 }
 
-$resultSet = $mysqli->query("SELECT * FROM COMMENTary ORDER BY $order $sort");
+$resultSet = $mysqli_query("SELECT * FROM COMMENTary ORDER BY $order $sort");
 
 if ($resultSet->num_rows >0){
 
