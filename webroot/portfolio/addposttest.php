@@ -18,13 +18,12 @@
  id(isset($_POST['submit']))
 
 {
-$time= $_POST[date('H:i')];
-$date= $_POST[date('m-d-y')];
+
 $title=$_POST['title'];
 $comment=$_POST['comment'];
 
 $sql =  mysqli_query($conn,"INSERT INTO COMMENTSECTION (title, comment, date, time)
-          VALUES ('$title' , '$comment' , '$date' , '$time')");
+          VALUES ('$title' , '$comment' , 'date('m-d-y')' , 'date('H:i')')");
 
  if ($sql){
 
