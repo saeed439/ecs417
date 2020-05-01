@@ -1,6 +1,6 @@
 <?php
 
- 
+ SESSION_START();
  $dbhost= getenv("MYSQL_SERVICE_HOST");
  $dbport= getenv("MYSQL_SERVICE_PORT");
  $dbuser= getenv("DATABASE_USER");
@@ -15,7 +15,7 @@
 }
  
 
-
+ 
 
  if(isset($_POST['username'])){
 
@@ -26,6 +26,7 @@
   $result = mysqli_query($conn,$sql);
 
   if(mysqli_num_rows($result)==1){ 
+   $_SESSION['user'] = $user;
    header('Location:addposttest.php');
    exit();
 }
