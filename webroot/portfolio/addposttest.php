@@ -1,5 +1,5 @@
 <?php 
- 
+ SESSION_START();
  $dbhost= getenv("MYSQL_SERVICE_HOST");
  $dbport= getenv("MYSQL_SERVICE_PORT");
  $dbuser= getenv("DATABASE_USER");
@@ -23,7 +23,7 @@
    $comment=$_POST['comment'];
 
 $sql =  "INSERT INTO COMMENTary (title, comment)
-          VALUES ('$title' , '$comment')");
+          VALUES ('$title' , '$comment')";
 
 
 $sql2= mysqli_query($conn, $sql);
