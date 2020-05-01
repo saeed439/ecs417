@@ -30,7 +30,7 @@ $sql2= mysqli_query($conn, $sql);
 
  if ($sql2){
 
-  echo "SUccess";
+  header('Location:logout.php');
 }
  
 else {

@@ -1,22 +1,3 @@
-<!doctype html>
-<html>
-
-<head>
-<link rel="stylesheet" href="reset2.css" type="text/css" />
-<link rel="stylesheet" href="addPostcss.css" type="text/css" />
-
-</head>
-
-<body>
-
-<table> 
- <tr>
-   <th>ID</th>
-   <th>title</th>
-   <th>comment</th>
-   <th>date</th>
-   <th>time</th>
- </tr>
 <?php
 
  $dbhost= getenv("MYSQL_SERRVICE_HOST");
@@ -28,31 +9,62 @@
 if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);}
 
-  $sql="SELECT ID, title, comment, date, time from COMMENTSECTION";
-  $result = $conn-> query($sql);
 
-  if ($result -> num_rows >0){
-   while ($row = $result-> fetch_assoc()) {
-    echo "<tr><td>". $row["ID"] ."</td><td>". $row["title"] ."</td><td>". $row[
-   "comment"] ."</td><td>". $row["date"] ."</td><td>". $row["time"] ."</td></tr>";
-                             }
-echo "</table>";
+  if(isset($_get['sort'])){
+
+  $order = $_GET['order'];
+
 }
-else{
-   echo "no comments";}
+  else{
+   $order = 'asset_num';
+}
+   
+  if(isset($_GET['sort')){
+     $sort = $_GET['order'];
 
-$conn -> close();
+}
+   else {
+
+    $sort= 'DESC';
+}
+
+$resultSet = $mysqli->query(SELECT * FROM COMMENTary ORDER BY $order $sort");
+
+if ($resultSet->num_rows >0){
+
+  echo"
+
+  <table border='1'>
+
+     <th>Title</th>
+
+     <th>Comment</th>
+     
+     <th>Date and Time</th>
+";
+    while($rows = $resultSet->fetch_assoc()){
+
+
+    $title=$rows['title'];
+    $comment= $rows['comment'];
+    $date= $['date'];
+
+   echo"
+
+   <tr>
+
+     <td>$title</td>
+     <td>$comment</td>
+     <td>$date</td>
+
+    </tr>";
+}
+   echo"</table>";
+}
+
+
+else { echo "no records returned."}
+
+
 ?>
 
-
-
-
-
-
-</table>
-
-
-
-
-</body>
-</html>
