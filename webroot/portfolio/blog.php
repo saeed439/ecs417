@@ -20,7 +20,7 @@ th{
 background-color:#d96444;
 color:white;
 }
-tr:nth-child {
+tr:nth-child(even) {
 background-color: #f2f2f2
 }
 
