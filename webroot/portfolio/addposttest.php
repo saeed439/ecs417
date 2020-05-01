@@ -12,8 +12,8 @@
       die("connection failed: " . $conn->connect_error);
 
                            }
-$time= date("H:i");
-$date= date('m-d-y');
+$time= $_POST[date("H:i")];
+$date= $_POST[date('m-d-y')];
 $title=$_POST['title'];
 $comment=$_POST['comment'];
 
@@ -21,7 +21,7 @@ $sql = "INSERT INTO COMMENTSECTION (title, comment, date, time)
           VALUES ('$title' , '$comment' , '$date' , '$time')";
 
  
-  echo "NEW COMMENT added";
+ 
 
 
 
@@ -75,7 +75,7 @@ else if (document.getElementById('comment').value == ""){
 <body>
 
 
-<form onsubmit="return preventDefault()" action="#">
+<form onsubmit="return preventDefault()" action="#" form method="POST">
  <legend>Please add your comment</legend>
 
 <section id="section1">
