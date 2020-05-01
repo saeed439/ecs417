@@ -78,7 +78,7 @@ else if (document.getElementById('comment').value == ""){
 <body>
 
 
-<form onsubmit="return preventDefault()">
+<form onsubmit="return preventDefault()" action="#">
  <legend>Please add your comment</legend>
 
 <section id="section1">
