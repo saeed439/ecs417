@@ -107,7 +107,7 @@ else if (document.getElementById('comment').value == ""){
 </section>
 
 <section id="buttons">
-<input type="submit" value="Post" id="button">
+<input type="submit" value="Post" id="button" name="submit">
 <button id="button">clear</button>
 </section>
 </form>
