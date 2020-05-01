@@ -18,6 +18,7 @@
    <th>time</th>
  </tr>
 <?php
+
  $dbhost= getenv("MYSQL_SERRVICE_HOST");
  $dbport= getenv("MYSQL_SERRVICE_PORT");
  $dbuser= getenv("DATABASE_USER");

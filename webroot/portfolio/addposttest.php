@@ -14,8 +14,8 @@
 }
 $time= date("H:i");
 $date= date('m-d-y');
-$title=$_POST["title"];
-$comment=$_POST["comment"];
+$title=$_POST['title'];
+$comment=$_POST['comment'];
 
 
 
