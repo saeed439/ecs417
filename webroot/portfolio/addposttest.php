@@ -22,7 +22,7 @@
    $title=$_POST['title'];
    $comment=$_POST['comment'];
 
-$sql =  mysqli_query($conn,"INSERT INTO COMMENTSECTION (title, comment,)
+$sql =  mysqli_query($conn,"INSERT INTO COMMENTSECTION (title, comment)
           VALUES ('$title' , '$comment')");
 
  if ($sql){
