@@ -21,7 +21,7 @@
 
   $user=$_POST['username'];
   $password=$_POST['password'];
-  $sql="select * from loginform where User='".$user."'AND Pass='".$password."'
+  $sql="select * from USER where username='".$user."'AND password='".$password."'
   limit 1";
   $result=mysql_query($sql);
 
