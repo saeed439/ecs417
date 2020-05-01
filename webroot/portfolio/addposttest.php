@@ -22,18 +22,20 @@
    $title=$_POST['title'];
    $comment=$_POST['comment'];
 
-$sql =  mysqli_query($conn,"INSERT INTO COMMENTary (title, comment,)
+$sql =  "INSERT INTO COMMENTary (title, comment)
           VALUES ('$title' , '$comment')");
 
- if ($sql){
+
+$sql2= mysqli_query($conn, $sql);
+
+ if ($sql2){
 
   echo "SUccess";
 }
  
 else {
 
-
- echo "fail";
+  echo "fail";
 }
 
 
