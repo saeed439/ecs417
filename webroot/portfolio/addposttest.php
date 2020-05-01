@@ -17,10 +17,21 @@ $date= date('m-d-y');
 $title=$_POST['title'];
 $comment=$_POST['comment'];
 
+$sql = "INSERT INTO COMMENTSECTION (title, comment, date, time)
+          VALUES ('$title' , '$comment' , '$date' , '$time')";
+
+  if ($conn->querry($aql)===TRUE {
+    echo "NEW COMMENT added";
+
+}
+
+  else {
+
+    echo "Error: " . $sql. "<br>" .
+}
 
 
-  echo "<h2>succesful post<h2> 
-  <p><a href='exercise2topic5.html'>HOME</a></p>";
+  
 
 
 
