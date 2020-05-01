@@ -20,7 +20,7 @@ $comment=$_POST['comment'];
 $sql = "INSERT INTO COMMENTSECTION (title, comment, date, time)
           VALUES ('$title' , '$comment' , '$date' , '$time')";
 
-  if ($conn->querry($aql)===TRUE) {
+  if ($conn-> mysqli_query($conn,$sql)===TRUE) {
     echo "NEW COMMENT added";
 
 }
