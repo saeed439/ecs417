@@ -18,7 +18,7 @@
  id(isset($_POST['submit']))
 
 {
-$time= $_POST[date("H:i")];
+$time= $_POST[date('H:i')];
 $date= $_POST[date('m-d-y')];
 $title=$_POST['title'];
 $comment=$_POST['comment'];
