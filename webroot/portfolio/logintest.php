@@ -25,7 +25,7 @@
   limit 1";
   $result = mysqli_query($conn,$sql);
 
-  if(mysql_num_rows($result)==1){ 
+  if(mysqli_num_rows($result)==1){ 
    echo " you logged in ";
    exit();
 }
