@@ -19,7 +19,7 @@ if ($conn->connect_error){
    $order = 'asset_num';
 }
    
-  if(isset($_GET['sort']){
+  if(isset($_GET['sort'])){
      $sort = $_GET['order'];
 
 }
