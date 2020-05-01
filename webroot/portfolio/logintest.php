@@ -23,7 +23,7 @@
   $password=$_POST['password'];
   $sql="select * from USER where username='".$user."'AND password='".$password."'
   limit 1";
-  $result=mysql_query($sql);
+  $result = mysqli_query($conn,$sql);
 
   if(mysql_num_rows($result)==1){ 
    echo " you logged in ";
