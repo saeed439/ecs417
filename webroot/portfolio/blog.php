@@ -1,3 +1,18 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog</title>
+</head>
+<body>
+
+<table>
+  <tr>
+   <th>Title</th>
+   <th>Comment</th>
+   <th>Date and Time</th>
+  </tr>
 <?php
  $dbhost= getenv("MYSQL_SERVICE_HOST");
  $dbport= getenv("MYSQL_SERVICE_PORT");
@@ -11,64 +26,24 @@
       die("connection failed: " . $conn->connect_error);
 
                            }
-
-
-
-  if(isset($_GET['sort'])){
-
-  $order = $_GET['order'];
-
-}
-  else{
-   $order = 'asset_num';
-}
-   
-  if(isset($_GET['sort'])){
-     $sort = $_GET['order'];
-
-}
-   else {
-
-    $sort= 'DESC';
+  $sql = "SELECT title, comment, date from COMMENTary order by id desc");
+  $result = $conn ->query($sql);
+  if ($result -> num_rows > 0){
+    while ($row = $result -> fetch_assoc()){
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>"$. row["date"] ."</td></tr>";
 }
 
-$resultSet = $mysqli_query("SELECT * FROM COMMENTary ORDER BY $order $sort");
-
-if ($resultSet->num_rows >0){
-
-  echo"
-
-  <table border='1'>
-
-     <th>Title</th>
-
-     <th>Comment</th>
-     
-     <th>Date and Time</th>
-";
-    while($rows = $resultSet->fetch_assoc()){
+echo "</table>";
 
 
-    $title=$rows['title'];
-    $comment= $rows['comment'];
-    $date= $rows['date'];
 
-   echo"
-
-   <tr>
-
-     <td>$title</td>
-     <td>$comment</td>
-     <td>$date</td>
-
-    </tr>";
-}
-   echo"</table>";
 }
 
+else { echo "no results";}
 
-else { echo "no records returned.";}
-
-
+$conn->close();
 ?>
+</table>
+</body>
+</html>
 
