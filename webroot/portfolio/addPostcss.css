@@ -7,6 +7,10 @@ margin:2rem;
 
 
 }
+a{
+text-decoration:none;
+
+}
 body{
 
 
@@ -22,6 +26,7 @@ border-radius:10%;
 margin:1rem;
 width:7%;
 padding:0.5%;
+text-decoration:none;
 }
 #buttons{
 text-align:center;
