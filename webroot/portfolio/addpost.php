@@ -74,9 +74,10 @@ $sql2= mysqli_query($conn, $sql);
 <link rel="stylesheet" href="reset2.css" type="text/css" />
 <link rel="stylesheet" href="addPostcss.css" type="text/css" />
 <script>
-let btnClear = ducument.querySelector('buttton');
+let btnClear = ducument.querySelector('button');
 let inputs = document.querySelectorAll('input');
-
+btnClear.addEventListener('click', () => {
+     inputs.forEach(input => input.value = '');});
 
 
 function preventDefault(){
@@ -105,8 +106,7 @@ else if (document.getElementById('comment').value == ""){
 
 
   }
-btnClear.addEventListener('click', () => {
-     inputs.forEach(input => input.value = '');});
+
 
 }
 
