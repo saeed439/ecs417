@@ -114,6 +114,7 @@ color: #717d7e ;
 font-family:helvetica;
 margin:0.5rem;
 padding:1rem;
+text-decoration: none;
 }
 #edutext{
 border:1px solid black;
