@@ -137,7 +137,7 @@ else if (document.getElementById('comment').value == ""){
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 <button id="button">clear</button>
-<a href="#modal" class="btn-modal"><input type="Post" value="preview" id="button" name="preview"></a>
+<input type="Post" value="preview" id="button" name="preview" href="#modal" class="btn-modal">
  <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
