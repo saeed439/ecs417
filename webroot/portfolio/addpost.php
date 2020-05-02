@@ -91,8 +91,8 @@ else if (document.getElementById('comment').value == ""){
 <a href="#modal" class="btn-modal">Preview</a>
  <div class="content-modal" id="modal">
   <div class="modal">
-    <a href="#" class"close">X</a>
-     <p> <img src="blogcap.png" width="300" height="300" </p>
+    <a href="#" class="close">X</a>
+     <p> <img src="blogcap.png" width="600" height="400" </p>
    </div>
   </div>
 
