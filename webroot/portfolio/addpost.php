@@ -81,9 +81,15 @@ btnClear.addEventListener('click', () => {
 
 
 function preventDefault(){
- 
+if (document.getElementById('title').value == "" &&document.getElementById('comment').value == ""){
+   
+   alert("please fill in the title and comment");
+   document.getElementById('title').style.borderColor = "red";
+   document.getElementById('comment').style.borderColor = "red";
+   return false;
+   } 
 
- if (document.getElementById('title').value == "" ){
+else if (document.getElementById('title').value == "" ){
    
    alert("please fill in the title");
    document.getElementById('title').style.borderColor = "red";
@@ -104,7 +110,7 @@ else if (document.getElementById('comment').value == ""){
 </head>
 
 <body>
-<a href="#modal" class"btn-modal"><button id="button">preview</button></a>
+<a href="#modal" class"btn-modal" id="button">preview</a>
 <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
