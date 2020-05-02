@@ -28,7 +28,7 @@ background-color: #f2f2f2
 </style>
 </head>
 <body>
-
+ <a href="index.html"> <button>Home</button></a>
 <table>
   <tr>
    <th>Title</th>
