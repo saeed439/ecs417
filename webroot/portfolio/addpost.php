@@ -72,6 +72,7 @@ if (document.getElementById('title').value == "" && document.getElementById('com
    
    alert("please fill in the title and the comment");
    document.getElementById('title').style.borderColor = "red";
+   document.getElementById('comment').style.borderColor = "red";
    return false;
    }
 
