@@ -42,6 +42,20 @@ else {
 
   
 }
+if(isset($_POST['preview']))
+
+{
+
+   $title=$_POST['title'];
+   $comment=$_POST['comment'];
+
+$sql =  "INSERT INTO PREVIEW (title, comment)
+          VALUES ('$title' , '$comment')";
+
+
+$sql2= mysqli_query($conn, $sql);
+
+}
 
   
 
@@ -100,13 +114,8 @@ else if (document.getElementById('comment').value == ""){
 </head>
 
 <body>
-<a href="#modal" class="btn-modal">Preview</a>
- <div class="content-modal" id="modal">
-  <div class="modal">
-    <a href="#" class="close">X</a>
-     <p> <img src="blogcap.png" width="900" height="400" </p>
-   </div>
-  </div>
+
+
 
 <form onsubmit="return preventDefault()" action="#" form method="POST">
  <legend>Please add your comment</legend>
@@ -128,7 +137,36 @@ else if (document.getElementById('comment').value == ""){
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 <button id="button">clear</button>
+<a href="#modal" class="btn-modal"><input type="SubToPre" value="Post" id="button" name="preview"></a>
+ <div class="content-modal" id="modal">
+  <div class="modal">
+    <a href="#" class="close">X</a>
+     <p>  <table>
+  <tr>
+   <th>Title</th>
+   <th>Comment</th>
+   <th>Date and Time</th>
+  </tr>
+<?php
+ 
 
+
+  $sql = "SELECT title, comment, date from PREVIEW order by id desc";
+  $result = $conn ->query($sql);
+  if ($result -> num_rows > 0){
+    while ($row = $result -> fetch_assoc()){
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
+}
+
+echo "</table>";
+
+
+
+}
+
+else { echo "no results";}</p>
+   </div>
+  </div>
 </section>
 </form>
 
