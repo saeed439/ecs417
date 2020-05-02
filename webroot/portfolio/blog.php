@@ -26,9 +26,10 @@ background-color: #f2f2f2
 
 
 </style>
+<a href="index.html"> <button>Home</button></a>
 </head>
 <body>
- <a href="index.html"> <button>Home</button></a>
+
 <table>
   <tr>
    <th>Title</th>
@@ -65,6 +66,7 @@ else { echo "no results";}
 
 $conn->close();
 ?>
+<a href="index.html"> <button>Home</button></a>
 </table>
 </body>
 </html>
