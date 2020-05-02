@@ -42,7 +42,7 @@ else {
 
   
 }
-if(isset($_POST['preview']))
+ if(isset($_POST['preview']))
 
 {
 
@@ -114,7 +114,56 @@ else if (document.getElementById('comment').value == ""){
 </head>
 
 <body>
+<a href="#modal" class"btn-modal"><button>preview</button></a>
+<div class="content-modal" id="modal">
+  <div class="modal">
+    <a href="#" class="close">X</a>
+     <p>  <table>
+  <tr>
+   <th>Title</th>
+   <th>Comment</th>
+   <th>Date and Time</th>
+  </tr>
+<?php
+  SESSION_START();
+ $dbhost= getenv("MYSQL_SERVICE_HOST");
+ $dbport= getenv("MYSQL_SERVICE_PORT");
+ $dbuser= getenv("DATABASE_USER");
+ $password= getenv("DATABASE_PASSWORD");
+ $dbname= getenv("DATABASE_NAME");
 
+ 
+ $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
+ if ($conn->connect_error){
+      die("connection failed: " . $conn->connect_error);
+
+                           }
+
+
+  $sql4 = "SELECT title, comment, date from PREVIEW order by id desc";
+  $result = $conn ->query($sql4);
+  if ($result -> num_rows > 0){
+    while ($row = $result -> fetch_assoc()){
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
+}
+
+echo "</table>";
+
+
+
+}
+
+else { echo "no results";}  
+
+
+
+
+
+$conn->close();
+
+?></p>
+   </div>
+  </div>
 
 
 <form onsubmit="return preventDefault()" action="#" form method="POST">
@@ -137,36 +186,8 @@ else if (document.getElementById('comment').value == ""){
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 <button id="button">clear</button>
-<input type="Post" value="preview" id="button" name="preview" href="#modal" class="btn-modal">
- <div class="content-modal" id="modal">
-  <div class="modal">
-    <a href="#" class="close">X</a>
-     <p>  <table>
-  <tr>
-   <th>Title</th>
-   <th>Comment</th>
-   <th>Date and Time</th>
-  </tr>
-<?php
+<input type="Post" value="SubToPre" id="button" name="preview">
  
-
-
-  $sql4 = "SELECT title, comment, date from PREVIEW order by id desc";
-  $result = $conn ->query($sql4);
-  if ($result -> num_rows > 0){
-    while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
-}
-
-echo "</table>";
-
-
-
-}
-
-else { echo "no results";}  ?></p>
-   </div>
-  </div>
 </section>
 </form>
 
