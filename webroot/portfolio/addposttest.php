@@ -110,6 +110,7 @@ else if (document.getElementById('comment').value == ""){
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 <button id="button">clear</button>
+<button id="button">preview</button>
 </section>
 </form>
 
