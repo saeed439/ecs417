@@ -164,7 +164,7 @@ echo "</table>";
 
 }
 
-else { echo "no results";}</p>
+else { echo "no results";}  ?></p>
    </div>
   </div>
 </section>
