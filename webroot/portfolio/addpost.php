@@ -92,7 +92,7 @@ else if (document.getElementById('comment').value == ""){
  <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
-     <p> <img src="blogcap.png" width="600" height="400" </p>
+     <p> <img src="blogcap.png" width="900" height="400" </p>
    </div>
   </div>
 
