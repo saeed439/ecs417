@@ -67,7 +67,18 @@ btnClear.addEventListener('click', () => {
      inputs.forEach(input => input.value = '');});
 
 function preventDefault(){
- if (document.getElementById('title').value == "" ){
+ 
+if (document.getElementById('title').value == "" && document.getElementById('comment').value == ""){
+   
+   alert("please fill in the title and the comment");
+   document.getElementById('title').style.borderColor = "red";
+   return false;
+   }
+
+
+
+
+else if (document.getElementById('title').value == "" ){
    
    alert("please fill in the title");
    document.getElementById('title').style.borderColor = "red";
