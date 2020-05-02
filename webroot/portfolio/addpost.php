@@ -77,8 +77,7 @@ $sql2= mysqli_query($conn, $sql);
 let btnClear = ducument.querySelector('buttton');
 let inputs = document.querySelectorAll('input');
 
-btnClear.addEventListener('click', () => {
-     inputs.forEach(input => input.value = '');});
+
 
 function preventDefault(){
  
@@ -106,7 +105,8 @@ else if (document.getElementById('comment').value == ""){
 
 
   }
-
+btnClear.addEventListener('click', () => {
+     inputs.forEach(input => input.value = '');});
 
 }
 
@@ -114,7 +114,7 @@ else if (document.getElementById('comment').value == ""){
 </head>
 
 <body>
-<a href="#modal" class"btn-modal" id="button"><button>preview</button></a>
+<a href="#modal" class"btn-modal"><button id="button">preview</button></a>
 <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
