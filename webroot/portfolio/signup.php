@@ -78,7 +78,7 @@ else {
 </section>
 <section id="buttons">
 
-<input type="submit" value="signup" id="button">
+<input type="submit" value="signup" id="button" name="submit">
 </section>
 </form>
 
