@@ -175,12 +175,12 @@ $conn->close();
 
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
-<button id="button">clear</button>
+
 <input type="submit" value="SubToPre" id="button" name="preview">
  
 </section>
 </form>
-
+<button id="button">clear</button>
 </body>
 
 </html>
