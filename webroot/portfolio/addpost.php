@@ -114,7 +114,7 @@ else if (document.getElementById('comment').value == ""){
 </head>
 
 <body>
-<a href="#modal" class"btn-modal"><button>preview</button></a>
+<a href="#modal" class"btn-modal" id="button"><button>preview</button></a>
 <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
@@ -186,7 +186,7 @@ $conn->close();
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 <button id="button">clear</button>
-<input type="Post" value="SubToPre" id="button" name="preview">
+<input type="submit" value="SubToPre" id="button" name="preview">
  
 </section>
 </form>
