@@ -24,14 +24,18 @@ session_destroy();
 <body>
 
 
-<form action="#">
+<form>
 
  <legend>Thank you for adding your comment</legend>
 
 <section>
 <?php 
    echo "CURRENT DATE ".date("m-d-y");
-   echo "CURRENT TIME ".date("h:i:s");
+   ?>
+<br>
+
+<?php 
+echo "CURRENT TIME ".date("h:i:s");
 ?>
 </section>
 <section id="buttons">
