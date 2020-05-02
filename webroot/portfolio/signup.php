@@ -30,7 +30,7 @@ $sql2= mysqli_query($conn, $sql);
 
  if ($sql2){
 
-  header('Location:exercise2week5.html');
+  header('Location:logout.php');
 }
  
 else {

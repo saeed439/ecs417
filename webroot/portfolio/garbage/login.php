@@ -1,37 +1,34 @@
 <?php
 
- SESSION_START();
- $dbhost= getenv("MYSQL_SERVICE_HOST");
- $dbport= getenv("MYSQL_SERVICE_PORT");
- $dbuser= getenv("DATABASE_USER");
- $password= getenv("DATABASE_PASSWORD");
- $dbname= getenv("DATABASE_NAME");
+ $dbhost= getenv("");
+ $dbport= getenv("");
+ $dbuser= getenv("user");
+ $password= getenv("password");
+ $db= getenv("ecs417");
 
- 
- $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
- if ($conn->connect_error){
+ //create connection
+ $conn = new mysqli($dbhost, $dbuser, $dbuser, $dbname);
+ //if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);
 
 }
- 
 
- 
+
 
  if(isset($_POST['username'])){
 
   $user=$_POST['username'];
   $password=$_POST['password'];
-  $sql="select * from USER where username='".$user."'AND password='".$password."'
+  $sql="select * from ecs417 where User='".$user."'AND Pass='".$password."'
   limit 1";
-  $result = mysqli_query($conn,$sql);
+  $result=mysql_query($sql);
 
-  if(mysqli_num_rows($result)==1){ 
-   $_SESSION['user'] = $user;
-   header('Location:addposttest.php');
+  if(mysql_num_rows($result)==1){ 
+   echo " you logged in ";
    exit();
 }
   else{ 
-   header('Location:logintest.php');
+   echo " you havent logged in";
    exit();
 }
 
