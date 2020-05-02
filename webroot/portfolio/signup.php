@@ -57,7 +57,7 @@ else {
 
 <head>
 <link rel="stylesheet" href="reset2.css" type="text/css" />
-<link rel="stylesheet" href="addentrycss.css" type="text/css" />
+<link rel="stylesheet" href="logincss.css" type="text/css" />
 </head>
 
 <body>
