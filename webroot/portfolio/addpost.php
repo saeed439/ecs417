@@ -151,8 +151,8 @@ else if (document.getElementById('comment').value == ""){
  
 
 
-  $sql = "SELECT title, comment, date from PREVIEW order by id desc";
-  $result = $conn ->query($sql);
+  $sql4 = "SELECT title, comment, date from PREVIEW order by id desc";
+  $result = $conn ->query($sql4);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
        echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
