@@ -88,7 +88,13 @@ else if (document.getElementById('comment').value == ""){
 </head>
 
 <body>
-
+<a href="#modal" class="btn-modal">Preview</a>
+ <div class="content-modal" id="modal">
+  <div class="modal">
+    <a href="#" class"close">X</a>
+     <p> <img src="blogcap.png" width="300" height="300" </p>
+   </div>
+  </div>
 
 <form onsubmit="return preventDefault()" action="#" form method="POST">
  <legend>Please add your comment</legend>
