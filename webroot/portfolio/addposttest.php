@@ -110,8 +110,6 @@ else if (document.getElementById('comment').value == ""){
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 <button id="button">clear</button>
-<button id="button"><a class='popupimage' href='blogcap.png'>preview</a></button>
-<script> $(document).ready(function(){$('.popupimage').esgi;});</script>
 
 </section>
 </form>
