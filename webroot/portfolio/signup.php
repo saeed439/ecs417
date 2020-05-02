@@ -30,7 +30,7 @@ $sql2= mysqli_query($conn, $sql);
 
  if ($sql2){
 
-  header('Location:logout.php');
+  header('Location:exercise2week5.html');
 }
  
 else {
@@ -63,7 +63,7 @@ else {
 <body>
 
 
-<form method="POST" action="#">
+<form action="#" method="POST">
  <legend>Create Your User and Pass</legend>
 
  <section id="section1">
@@ -73,7 +73,7 @@ else {
 <div>
  <label for="password">password</label>
 <div>
- <input type="password" name="password" id="pass" required>
+ <input type="text" name="password" id="pass" required>
 <div>
 </section>
 <section id="buttons">
