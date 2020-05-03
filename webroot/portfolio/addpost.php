@@ -121,19 +121,10 @@ else if (document.getElementById('comment').value == ""){
    <th>Date and Time</th>
   </tr>
 <?php
-  SESSION_START();
- $dbhost= getenv("MYSQL_SERVICE_HOST");
- $dbport= getenv("MYSQL_SERVICE_PORT");
- $dbuser= getenv("DATABASE_USER");
- $password= getenv("DATABASE_PASSWORD");
- $dbname= getenv("DATABASE_NAME");
+  
 
  
- $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
- if ($conn->connect_error){
-      die("connection failed: " . $conn->connect_error);
-
-                           }
+ 
 
 
   $sql4 = "SELECT title, comment, date from PREVIEW order by id desc";

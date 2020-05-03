@@ -31,7 +31,7 @@
    exit();
 }
   else{ 
-   header('Location:logintest.php');
+   header('Location:login.php');
    exit();
 }
 
