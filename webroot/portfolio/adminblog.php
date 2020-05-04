@@ -86,7 +86,7 @@ $conn->close();
 
 <label for="username">Type in id number</label>
  <div>
- <input type="text" name="field" required>
+ <input type="text" name="field">
 <input type="submit" name="delete" value="Rmove comment">
 </form>
 <a href="logout.php"> <button>Home</button></a>
