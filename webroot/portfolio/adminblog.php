@@ -65,14 +65,21 @@ echo "</table>";
 }
 
 else { echo "no results";}
+
+if(isset($_POST['delete'])){
+
+
 $id = $_POST['id'];
   $query = "DELETE FROM COMMENTary WHERE ID = $id";
   $result2 = mysqli_query($connect, $query);
    if ($result2){
-   
+   header('Location:adminblog.php');
    echo 'data deleted';
+   
 }
    else{ echo 'data not deleted';}
+
+}
 $conn->close();
 ?>
 <form action="#" method="POST"> 
