@@ -71,7 +71,7 @@ if(isset($_POST['delete'])){
 
 $id = $_POST['field'];
   $query = "DELETE FROM COMMENTary WHERE ID = $id";
-  $result2 = mysqli_query($connect, $query);
+  $result2 = mysqli_query($conn, $query);
    if ($result2){
    header('Location:adminblog.php');
    echo 'data deleted';
