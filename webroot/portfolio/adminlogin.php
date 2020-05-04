@@ -27,7 +27,7 @@
 
   if(mysqli_num_rows($result)==1){ 
    $_SESSION['user'] = $user;
-   header('Location:delete.php');
+   header('Location:adminblog.php');
    exit();
 }
   else{ 
