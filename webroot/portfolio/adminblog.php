@@ -53,7 +53,7 @@ background-color: #f2f2f2
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td><td><a href=delete.php?id=".$row['ID'].">del</a></td></tr>";
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td><td><a href=delete.php?id=".$row["ID"].">Delete Comment</a></td></tr>";
 }
 
 echo "</table>";
@@ -66,7 +66,7 @@ else { echo "no results";}
 
 $conn->close();
 ?>
-<a href="index.html"> <button>Home</button></a>
+<a href="logout.php"> <button>Home</button></a>
 </table>
 </body>
 </html>

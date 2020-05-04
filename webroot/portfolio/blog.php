@@ -35,7 +35,7 @@ background-color: #f2f2f2
    <th>Title</th>
    <th>Comment</th>
    <th>Date and Time</th>
-   <th>Delete</th>
+   
   </tr>
 <?php
  $dbhost= getenv("MYSQL_SERVICE_HOST");
