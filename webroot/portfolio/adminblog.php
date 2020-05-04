@@ -28,7 +28,7 @@ background-color: #f2f2f2
 
 </head>
 <body>
-
+<a href="logout.php"> <button>Home</button></a>
 <table>
   <tr>
    <th>ID</th>
@@ -89,7 +89,7 @@ $conn->close();
  <input type="text" name="field">
 <input type="submit" name="delete" value="Rmove comment">
 </form>
-<a href="logout.php"> <button>Home</button></a>
+
 </table>
 </body>
 </html>
