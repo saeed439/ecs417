@@ -83,8 +83,8 @@ $id = $_POST['field'];
 $conn->close();
 ?>
 <form action="#" method="POST"> 
-<input type="submit" name="delete" value="Clear Data">
-<label for="username">u</label>
+
+<label for="username">Type in id number</label>
  <div>
  <input type="text" name="field" required>
 <input type="submit" name="delete" value="Rmove comment">
