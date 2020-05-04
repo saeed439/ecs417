@@ -28,7 +28,7 @@ background-color: #f2f2f2
 
 </head>
 <body>
-<a href="logout.php"> <button>Home</button></a>
+<a href="logout.php"> <button>Back to Blog</button></a>
 <table>
   <tr>
    <th>ID</th>
