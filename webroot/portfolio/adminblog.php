@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,7 +53,7 @@ background-color: #f2f2f2
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td><td><a href=delete.php?id=".$row['ID'].">del</a></td></tr>";
 }
 
 echo "</table>";

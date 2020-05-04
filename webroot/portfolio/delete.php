@@ -17,7 +17,7 @@
 $sql = "DELETE FROM COMMENTary WHERE ID='$_GET[id]'";
 
   if(mysqli_query($conn,$sql)){
-header('Location:blog.php');
+header('Location:adminblog.php');
 exit();
 }
   else {echo "not deleted";
