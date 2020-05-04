@@ -35,6 +35,7 @@ background-color: #f2f2f2
    <th>Title</th>
    <th>Comment</th>
    <th>Date and Time</th>
+   <th>Delete</th>
   </tr>
 <?php
  $dbhost= getenv("MYSQL_SERVICE_HOST");
@@ -53,7 +54,7 @@ background-color: #f2f2f2
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td><td>" <a href=adminlogin.php?id=".$row['ID'].">DELETE</a>"</td></tr>";
 }
 
 echo "</table>";

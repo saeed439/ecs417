@@ -1,4 +1,5 @@
-<?php 
+<?php
+
  SESSION_START();
  $dbhost= getenv("MYSQL_SERVICE_HOST");
  $dbport= getenv("MYSQL_SERVICE_PORT");
@@ -11,47 +12,42 @@
  if ($conn->connect_error){
       die("connection failed: " . $conn->connect_error);
 
-                           }
-
-
-
- if(isset($_POST['submit']))
-
-{
-
-   $title=$_POST['username'];
-   $comment=$_POST['password'];
-
-$sql =  "INSERT INTO ADMIN (username, password)
-          VALUES ('$title' , '$comment')";
-
-
-$sql2= mysqli_query($conn, $sql);
-
- if ($sql2){
-
-  header('Location:index.html');
 }
  
-else {
 
-  echo "fail";
+ 
+
+ if(isset($_POST['username'])){
+
+  $user=$_POST['username'];
+  $password=$_POST['password'];
+  $sql="select * from ADMIN where username='".$user."'AND password='".$password."'
+  limit 1";
+  $result = mysqli_query($conn,$sql);
+
+  if(mysqli_num_rows($result)==1){ 
+   $_SESSION['user'] = $user;
+   header('Location:delete.php');
+   exit();
+}
+  else{ 
+   header('Location:adminlogin.php');
+   exit();
 }
 
+$conn->close();
 
-
-  
 }
-
-  
-
-
-
- $conn->close();
 
 
 
 ?>
+ 
+
+
+
+
+
 <!doctype html>
 <html>
 
@@ -63,8 +59,8 @@ else {
 <body>
 
 
-<form action="#" method="POST">
- <legend>Create Your User and Pass</legend>
+<form method="POST" action="#">
+ <legend>ADMIN LOGIN</legend>
 
  <section id="section1">
  <label for="username">username</label>
@@ -73,12 +69,12 @@ else {
 <div>
  <label for="password">password</label>
 <div>
- <input type="text" name="password" id="pass" required>
+ <input type="password" name="password" id="pass" required>
 <div>
 </section>
 <section id="buttons">
 
-<input type="submit" value="signup" id="button" name="submit">
+<input type="submit" value="login" id="button">
 </section>
 </form>
 
