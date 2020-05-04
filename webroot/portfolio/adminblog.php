@@ -31,6 +31,7 @@ background-color: #f2f2f2
 
 <table>
   <tr>
+   <th>ID</th>
    <th>Title</th>
    <th>Comment</th>
    <th>Date and Time</th>
@@ -49,11 +50,12 @@ background-color: #f2f2f2
       die("connection failed: " . $conn->connect_error);
 
                            }
+  
   $sql = "SELECT title, comment, date from COMMENTary order by id desc";
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td><td><a href=delete.php?id=".$row["ID"].">Delete Comment</a></td></tr>";
+       echo "<tr><td>". $row["ID"] ."</td><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
 }
 
 echo "</table>";
@@ -63,9 +65,21 @@ echo "</table>";
 }
 
 else { echo "no results";}
-
+$id = $_POST['id'];
+  $query = "DELETE FROM COMMENTary WHERE ID = $id";
+  $result2 = mysqli_query($connect, $query);
+   if ($result2){
+   
+   echo 'data deleted';
+}
+   else{ echo 'data not deleted';}
 $conn->close();
 ?>
+<form action="#" method="POST"> 
+ID TO DELETE:&nbsp;<input type="submit" name="delete" value="Clear Data">
+
+
+</form>
 <a href="logout.php"> <button>Home</button></a>
 </table>
 </body>
