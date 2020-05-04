@@ -35,7 +35,7 @@ background-color: #f2f2f2
    <th>Title</th>
    <th>Comment</th>
    <th>Date and Time</th>
-   <th>Delete</th>
+   
   </tr>
 <?php
  $dbhost= getenv("MYSQL_SERVICE_HOST");
@@ -51,7 +51,7 @@ background-color: #f2f2f2
 
                            }
   
-  $sql = "SELECT title, comment, date from COMMENTary order by id desc";
+  $sql = "SELECT ID, title, comment, date from COMMENTary order by id desc";
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
@@ -69,7 +69,7 @@ else { echo "no results";}
 if(isset($_POST['delete'])){
 
 
-$id = $_POST['id'];
+$id = $_POST['field'];
   $query = "DELETE FROM COMMENTary WHERE ID = $id";
   $result2 = mysqli_query($connect, $query);
    if ($result2){
@@ -83,9 +83,11 @@ $id = $_POST['id'];
 $conn->close();
 ?>
 <form action="#" method="POST"> 
-ID TO DELETE:&nbsp;<input type="submit" name="delete" value="Clear Data">
-
-
+<input type="submit" name="delete" value="Clear Data">
+<label for="username">u</label>
+ <div>
+ <input type="text" name="field" required>
+<input type="submit" name="delete" value="Rmove comment">
 </form>
 <a href="logout.php"> <button>Home</button></a>
 </table>
