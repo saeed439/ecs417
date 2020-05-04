@@ -22,7 +22,7 @@
    $title=$_POST['username'];
    $comment=$_POST['password'];
 
-$sql =  "INSERT INTO ADMIN (username, password)
+$sql =  "INSERT INTO USER (username, password)
           VALUES ('$title' , '$comment')";
 
 
