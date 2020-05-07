@@ -131,7 +131,7 @@ else if (document.getElementById('comment').value == ""){
 <tr><td>document.getElementByID('title').innerHTML = document.myform.name.value;
 </td><td>document .getElementByID('comment').innerHTML = document.myform.name.value;</td>
 }
-</script> <td><?php echo "date("h:i:sa")";echo "date("Y/m/d")"; ?> </td></tr>
+</script> <td><?php echo date("h:i:sa");echo date("Y/m/d"); ?> </td></tr>
 </table>
 <input type="submit" value="Post" id="button" name="submit">
    </p>
