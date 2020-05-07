@@ -28,7 +28,7 @@ background-color: #f2f2f2
 
 </head>
 <body>
-<a href="logout.php"> <button>Back to Blog</button></a>
+<a href="logout2.php"> <button>Back to Comments</button></a>
 <table>
   <tr>
    <th>ID</th>
@@ -70,7 +70,7 @@ if(isset($_POST['delete'])){
 
 
 $id = $_POST['field'];
-  $query = "DELETE FROM COMMENTary WHERE ID = $id";
+  $query = "DELETE FROM COMMENTs WHERE ID = $id";
   $result2 = mysqli_query($conn, $query);
    if ($result2){
    header('Location:adminblog.php');
