@@ -22,7 +22,7 @@
    $title=$_POST['title'];
    $comment=$_POST['comment'];
 
-$sql =  "INSERT INTO COMMENTary (title, comment)
+$sql =  "INSERT INTO COMMENTs (title, comment)
           VALUES ('$title' , '$comment')";
 
 

@@ -67,7 +67,7 @@ else { echo "no results";}
 
 $conn->close();
 ?>
-<a href="index.html"> <button>Home</button></a>
+<a href="index.php"> <button>Home</button></a>
 </table>
 </body>
 </html>
