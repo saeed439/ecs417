@@ -114,7 +114,7 @@ else if (document.getElementById('comment').value == ""){
 
 
 <form onsubmit="return preventDefault()" action="#" form method="POST" name='myform'>\
-<a href="#modal" class"btn-modal" id="button">preview</a>
+<a href="#modal" class"btn-modal" id="button" onclick='check(); return false'>preview</a>
 <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
