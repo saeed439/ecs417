@@ -21,13 +21,13 @@
 
   $user=$_POST['username'];
   $password=$_POST['password'];
-  $sql="select * from ADMIN where username='".$user."'AND password='".$password."'
+  $sql="select * from USER where username='".$user."'AND password='".$password."'
   limit 1";
   $result = mysqli_query($conn,$sql);
 
   if(mysqli_num_rows($result)==1){ 
    $_SESSION['user'] = $user;
-   header('Location:addpost.php');
+   header('Location:addcomment.php');
    exit();
 }
   else{ 

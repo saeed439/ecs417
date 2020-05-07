@@ -27,11 +27,12 @@ background-color: #f2f2f2
 </style>
 
 </head>
+
+<h1> COMMENT SECTION </h1>
 <body>
-<a href="logout.php"> <button>Back to Blog</button></a>
+
 <table>
   <tr>
-   <th>ID</th>
    <th>Name</th>
    <th>Comment</th>
    <th>Date and Time</th>
@@ -50,12 +51,11 @@ background-color: #f2f2f2
       die("connection failed: " . $conn->connect_error);
 
                            }
-  
-  $sql = "SELECT ID, title, comment, date from COMMENTs order by id desc";
+  $sql = "SELECT title, comment, date from COMMENTs order by id desc";
   $result = $conn ->query($sql);
   if ($result -> num_rows > 0){
     while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["ID"] ."</td><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
 }
 
 echo "</table>";
@@ -66,30 +66,9 @@ echo "</table>";
 
 else { echo "no results";}
 
-if(isset($_POST['delete'])){
-
-
-$id = $_POST['field'];
-  $query = "DELETE FROM COMMENTary WHERE ID = $id";
-  $result2 = mysqli_query($conn, $query);
-   if ($result2){
-   header('Location:adminblog.php');
-   echo 'data deleted';
-   
-}
-   else{ echo 'data not deleted';}
-
-}
 $conn->close();
 ?>
-<form action="#" method="POST"> 
-
-<label for="username">Type in id number</label>
- <div>
- <input type="text" name="field">
-<input type="submit" name="delete" value="Rmove comment">
-</form>
-
+<a href="index.html"> <button>Home</button></a>
 </table>
 </body>
 </html>

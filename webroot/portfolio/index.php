@@ -131,10 +131,16 @@ num:
 <a href="blog.php"><button>View blog</button></a>
 <br>
 <br>
-<a href="signup.php"><button> Sign up</button></a>
+<a href="signup.php"><button> Sign up To Comment</button></a>
 <br>
 <br>
-<a href="adminlogin.php"><button> ADMIN</button></a>
+<a href="adminlogin.php"><button> Admin Management</button></a>
+<br>
+<br>
+<a href="commentlogin.php"><button>Add Comment</button></a>
+<br>
+<br>
+<a href="commentsection.php"><button>View Comment Section</button></a>
 </p>
 </aside>
 </section>
