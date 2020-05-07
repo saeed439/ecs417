@@ -79,9 +79,9 @@ let inputs = document.querySelectorAll('input');
 btnClear.addEventListener('click', () => {
      inputs.forEach(input => input.value = '');});
 function check(){
-document.getElementById('f1').innerHTML=document.getElementById('title').innerHTML;
+document.getElementById('f1').innerHTML=document.getElementById('title').innerHTML.value;
 
-document.getElementById('f2').innerHTML=document.getElementById('comment').innerHTML;
+document.getElementById('f2').innerHTML=document.myform.comment.value;
 
 
 }
@@ -119,7 +119,7 @@ else if (document.getElementById('comment').value == ""){
 
 
 
-<form onsubmit="return preventDefault()" action="#" form method="POST">
+<form onsubmit="return preventDefault()" action="#" form method="POST" name="myform">
  <a href="#modal" class"btn-modal" id="button" onclick="check()">preview</a>
 <div class="content-modal" id="modal">
   <div class="modal">
