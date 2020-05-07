@@ -125,10 +125,10 @@ num:
 </hgroup>
 <section id="badgesbackground">
 <p id="commenttext">
-<a href="login.php"><button> Add comment</button></a>
+<a href="login.php"><button> Add Blog Comment</button></a>
 <br>
 <br>
-<a href="blog.php"><button>View blog</button></a>
+<a href="blog.php"><button>View My blog</button></a>
 <br>
 <br>
 <a href="signup.php"><button> Sign up To Comment</button></a>

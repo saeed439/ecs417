@@ -30,7 +30,7 @@ $sql2= mysqli_query($conn, $sql);
 
  if ($sql2){
 
-  header('Location:logout.php');
+  header('Location:logout2.php');
 }
  
 else {
@@ -134,7 +134,7 @@ else if (document.getElementById('comment').value == ""){
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 
-<input type="submit" value="SubToPre" id="button" name="preview">
+
 <button id="button">clear</button>
 </section>
 </form>
