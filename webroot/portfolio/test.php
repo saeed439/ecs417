@@ -113,7 +113,7 @@ else if (document.getElementById('comment').value == ""){
 
 
 
-<form onsubmit="return preventDefault()" action="#" form method="POST">\
+<form onsubmit="return preventDefault()" action="#" form method="POST" name='myform'>\
 <a href="#modal" class"btn-modal" id="button">preview</a>
 <div class="content-modal" id="modal">
   <div class="modal">
@@ -128,10 +128,15 @@ else if (document.getElementById('comment').value == ""){
 
 
 <script>function check(){ 
-<tr><td>document.getElementByID('title').innerHTML = document.myform.name.value;
-</td><td>document .getElementByID('comment').innerHTML = document.myform.name.value;</td>
+document.getElementByID('f1').innerHTML = document.myform.title.value;
+document .getElementByID('f2').innerHTML = document.myform.comment.value;
 }
-</script> <td><?php echo date("h:i:sa");echo date("Y/m/d"); ?> </td></tr>
+</script> 
+
+<tr><td> <p id='f1'></p>  </td><td> <p id='f2'></p>  </td>
+
+
+<td><?php echo date("Y/m/d"); echo date("h:i:sa"); ?> </td></tr>
 </table>
 <input type="submit" value="Post" id="button" name="submit">
    </p>
