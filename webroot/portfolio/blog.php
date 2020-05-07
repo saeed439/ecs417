@@ -29,7 +29,7 @@ background-color: #f2f2f2
 
 </head>
 <body>
-
+<h1> My Blog</h1>
 <table>
   <tr>
    <th>Title</th>
