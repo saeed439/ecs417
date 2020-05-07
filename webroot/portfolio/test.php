@@ -1,5 +1,3 @@
-
-
 <?php 
  SESSION_START();
  $dbhost= getenv("MYSQL_SERVICE_HOST");
@@ -111,22 +109,12 @@ else if (document.getElementById('comment').value == ""){
 </script>
 </head>
 
+<body>
 
 
 
 <form onsubmit="return preventDefault()" action="#" form method="POST">
-<script>
-var buttonnnn = document.getElementById("buttonss");
-buttonnnn.onclick = function(){
-document.getElementById('f1').innerHTML = document.title.value;
-document.getElementById('f2').innerHTML = document.comment.value;
-
-}
-
-
-</script>
-<body>
-<a href="#modal" class"btn-modal" id="buttonss">preview</a>
+ <a href="#modal" class"btn-modal" id="button">preview</a>
 <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
@@ -136,16 +124,48 @@ document.getElementById('f2').innerHTML = document.comment.value;
    <th>Comment</th>
    <th>Date and Time</th>
   </tr>
+<?php
+  SESSION_START();
+ $dbhost= getenv("MYSQL_SERVICE_HOST");
+ $dbport= getenv("MYSQL_SERVICE_PORT");
+ $dbuser= getenv("DATABASE_USER");
+ $password= getenv("DATABASE_PASSWORD");
+ $dbname= getenv("DATABASE_NAME");
 
-<tr><td> <p id='f1'></p>  </td><td> <p id='f2'></p>  </td>
+ 
+ $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
+ if ($conn->connect_error){
+      die("connection failed: " . $conn->connect_error);
+
+                           }
 
 
-<td><?php echo date("Y/m/d"); echo "  " . date("h:i:sa"); ?> </td></tr>
-</table>
+  $sql4 = "SELECT title, comment, date from PREVIEW order by id desc";
+  $result = $conn ->query($sql4);
+  if ($result -> num_rows > 0){
+    while ($row = $result -> fetch_assoc()){
+       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
+}
 
+echo "</table>";
+
+
+
+}
+
+else { echo "no results";}  
+
+
+
+
+
+$conn->close();
+
+?>
+<input type="submit" value="Post" id="button" name="submit">
    </p>
    </div>
-  </div> 
+  </div>
 <legend>Please add your comment</legend>
 
 <section id="section1">
@@ -173,46 +193,3 @@ document.getElementById('f2').innerHTML = document.comment.value;
 </body>
 
 </html>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-<td><?php echo date("Y/m/d"); echo "  " . date("h:i:sa"); ?> </td></tr>
-</table>
