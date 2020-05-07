@@ -1,3 +1,5 @@
+
+
 <?php 
  SESSION_START();
  $dbhost= getenv("MYSQL_SERVICE_HOST");
@@ -109,18 +111,42 @@ else if (document.getElementById('comment').value == ""){
 </script>
 </head>
 
+
+
+
+<form onsubmit="return preventDefault()" action="#" form method="POST">
+<script>
+var buttonnnn = document.getElementById("buttonss");
+buttonnnn.onclick = function(){
+document.getElementById('f1').innerHTML = document.title.value;
+document.getElementById('f2').innerHTML = document.comment.value;
+
+}
+
+
+</script>
 <body>
+<a href="#modal" class"btn-modal" id="buttonss">preview</a>
+<div class="content-modal" id="modal">
+  <div class="modal">
+    <a href="#" class="close">X</a>
+     <p>  <table>
+  <tr>
+   <th>Title</th>
+   <th>Comment</th>
+   <th>Date and Time</th>
+  </tr>
+
+<tr><td> <p id='f1'></p>  </td><td> <p id='f2'></p>  </td>
 
 
+<td><?php echo date("Y/m/d"); echo "  " . date("h:i:sa"); ?> </td></tr>
+</table>
 
-<form onsubmit="return preventDefault()" action="#" form method="POST" name='myform'>\
-
-<input type="submit" value="Post" id="button" name="submit">
    </p>
    </div>
-  </div>
-
- <legend>Please add your comment</legend>
+  </div> 
+<legend>Please add your comment</legend>
 
 <section id="section1">
  <p>
@@ -138,53 +164,55 @@ else if (document.getElementById('comment').value == ""){
 
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
-<input type="button" href="#modal" class="btn-modal" id="button" value="Preview" onclick="AddRow()">
-<input type="submit" value="Preview" id="button" name="preview" onclick='check(); return false'>
+
+<input type="submit" value="SubToPre" id="button" name="preview">
 <button id="button">clear</button>
-
-<div class="content-modal" id="modal">
-  <div class="modal">
-    <a href="#" class="close">X</a>
-     <p>  <table id="show">
-  <tr>
-   <th>Title</th>
-   <th>Comment</th>
-   <th>Date and Time</th>
-  </tr>
-
-
-
-<script>
-var list1=[];
-var list2=[];
-var n = 1;
-var x = 0;
-function AddRow(){
-
-var AddRown = document.getElementById('show');
-var NewRow = AddRown.insertRow(n);
-
-list1[x]=document.getElementById("title").value;
-list2[x]=document.getElementById("comment").value;
-
-var cel1= NewRow.insertCell(0);
-var cel2= NewRow.insertCell(1);
-cel1.innerHTML=list1[x];
-cel2.innerHTML=list2[x];
-n++;
-x++;
-}
-
-</script> 
-
-<tr><td> <p id='f1'></p>  </td><td> <p id='f2'></p>  </td>
-
-
-<td><?php echo date("Y/m/d"); echo "  " . date("h:i:sa"); ?> </td></tr>
-</table>
 </section>
 </form>
 
 </body>
 
 </html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+<td><?php echo date("Y/m/d"); echo "  " . date("h:i:sa"); ?> </td></tr>
+</table>
