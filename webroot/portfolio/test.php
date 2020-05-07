@@ -79,7 +79,7 @@ let inputs = document.querySelectorAll('input');
 btnClear.addEventListener('click', () => {
      inputs.forEach(input => input.value = '');});
 function check(){
-document.getElementById('f1').innerHTML=document.getElementById('title').innerHTML.value;
+document.getElementById('f1').innerHTML=document.myform.title.value;
 
 document.getElementById('f2').innerHTML=document.myform.comment.value;
 
