@@ -78,7 +78,13 @@ let btnClear = ducument.querySelector('button');
 let inputs = document.querySelectorAll('input');
 btnClear.addEventListener('click', () => {
      inputs.forEach(input => input.value = '');});
+function check(){
+document.getElementById('f1').innerHTML=document.title.value;
 
+document.getElementById('f2').innerHTML=document.comment.value;
+
+
+}
 
 function preventDefault(){
 if (document.getElementById('title').value == "" &&document.getElementById('comment').value == ""){
@@ -114,7 +120,7 @@ else if (document.getElementById('comment').value == ""){
 
 
 <form onsubmit="return preventDefault()" action="#" form method="POST">
- <a href="#modal" class"btn-modal" id="button">preview</a>
+ <a href="#modal" class"btn-modal" id="button" onclick="check()">preview</a>
 <div class="content-modal" id="modal">
   <div class="modal">
     <a href="#" class="close">X</a>
@@ -124,44 +130,15 @@ else if (document.getElementById('comment').value == ""){
    <th>Comment</th>
    <th>Date and Time</th>
   </tr>
-<?php
-  SESSION_START();
- $dbhost= getenv("MYSQL_SERVICE_HOST");
- $dbport= getenv("MYSQL_SERVICE_PORT");
- $dbuser= getenv("DATABASE_USER");
- $password= getenv("DATABASE_PASSWORD");
- $dbname= getenv("DATABASE_NAME");
 
- 
- $conn = new mysqli($dbhost, $dbuser, $password, $dbname);
- if ($conn->connect_error){
-      die("connection failed: " . $conn->connect_error);
-
-                           }
+       <tr><td><p id="f1"></p> </td><td><p id="f2"></p> </td><td> <?php   echo date("Y/m/d"); echo " " . date("h:i:sa"); ?></td></tr>
 
 
-  $sql4 = "SELECT title, comment, date from PREVIEW order by id desc";
-  $result = $conn ->query($sql4);
-  if ($result -> num_rows > 0){
-    while ($row = $result -> fetch_assoc()){
-       echo "<tr><td>". $row["title"] ."</td><td>". $row["comment"] ."</td><td>". $row["date"] ."</td></tr>";
-}
-
-echo "</table>";
-
-
-
-}
-
-else { echo "no results";}  
+</table>
 
 
 
 
-
-$conn->close();
-
-?>
 <input type="submit" value="Post" id="button" name="submit">
    </p>
    </div>
