@@ -79,9 +79,9 @@ let inputs = document.querySelectorAll('input');
 btnClear.addEventListener('click', () => {
      inputs.forEach(input => input.value = '');});
 function check(){
-document.getElementById('f1').innerHTML=document.title.value;
+document.getElementById('f1').innerHTML=document.getElementById('title');
 
-document.getElementById('f2').innerHTML=document.comment.value;
+document.getElementById('f2').innerHTML=document.comment;
 
 
 }
