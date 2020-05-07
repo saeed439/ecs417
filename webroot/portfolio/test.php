@@ -185,7 +185,7 @@ $conn->close();
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 
-<input type="submit" value="SubToPre" id="button" name="preview" onclick="return false">
+<input type="submit" value="SubToPre" id="button" name="preview" onsubmit="return false">
 <button id="button">clear</button>
 </section>
 </form>
