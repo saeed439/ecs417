@@ -114,30 +114,7 @@ else if (document.getElementById('comment').value == ""){
 
 
 <form onsubmit="return preventDefault()" action="#" form method="POST" name='myform'>\
-<a href="#modal" class"btn-modal" id="button" onclick='check(); return false'>preview</a>
-<div class="content-modal" id="modal">
-  <div class="modal">
-    <a href="#" class="close">X</a>
-     <p>  <table>
-  <tr>
-   <th>Title</th>
-   <th>Comment</th>
-   <th>Date and Time</th>
-  </tr>
 
-
-
-<script>function check(){ 
-document.getElementByID('f1').innerHTML = document.myform.title.value;
-document .getElementByID('f2').innerHTML = document.myform.comment.value;
-}
-</script> 
-
-<tr><td> <p id='f1'></p>  </td><td> <p id='f2'></p>  </td>
-
-
-<td><?php echo date("Y/m/d"); echo date("h:i:sa"); ?> </td></tr>
-</table>
 <input type="submit" value="Post" id="button" name="submit">
    </p>
    </div>
@@ -161,9 +138,50 @@ document .getElementByID('f2').innerHTML = document.myform.comment.value;
 
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
-
+<input type="button" href="#modal" class="btn-modal" id="button" value="Preview" onclick="AddRow()">
 <input type="submit" value="Preview" id="button" name="preview" onclick='check(); return false'>
 <button id="button">clear</button>
+
+<div class="content-modal" id="modal">
+  <div class="modal">
+    <a href="#" class="close">X</a>
+     <p>  <table id="show">
+  <tr>
+   <th>Title</th>
+   <th>Comment</th>
+   <th>Date and Time</th>
+  </tr>
+
+
+
+<script>
+var list1=[];
+var list2=[];
+var n = 1;
+var x = 0;
+function AddRow(){
+
+var AddRown = document.getElementById('show');
+var NewRow = AddRown.insertRow(n);
+
+list1[x]=document.getElementById("title").value;
+list2[x]=document.getElementById("comment").value;
+
+var cel1= NewRow.insertCell(0);
+var cel2= NewRow.insertCell(1);
+cel1.innerHTML=list1[x];
+cel2.innerHTML=list2[x];
+n++;
+x++;
+}
+
+</script> 
+
+<tr><td> <p id='f1'></p>  </td><td> <p id='f2'></p>  </td>
+
+
+<td><?php echo date("Y/m/d"); echo "  " . date("h:i:sa"); ?> </td></tr>
+</table>
 </section>
 </form>
 
