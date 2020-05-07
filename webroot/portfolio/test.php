@@ -165,7 +165,7 @@ document.getElementById('f2').innerHTML = document.comment.value;
 <section id="buttons">
 <input type="submit" value="Post" id="button" name="submit">
 
-<input type="submit" value="SubToPre" id="button" name="preview">
+<input type="submit" value="SubToPre" id="button" name="preview" onclick="return false">
 <button id="button">clear</button>
 </section>
 </form>
