@@ -4,7 +4,7 @@
 <title> Portfolio </title>
 
 <link rel="stylesheet" href="reset.css" type="text/css" />
-<link rel="stylesheet" href="helloworldcss.css" type="text/css" />
+<link rel="stylesheet" href="design.css" type="text/css" />
 
 
 
