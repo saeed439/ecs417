@@ -16,7 +16,7 @@
 	<section id="navbar">
 	<h1><a id="header">Saeed Kaddoura</a><h1>
 
-	<a id="navelements" href="#hobbies">Contact</a>
+	<a id="navelements" href="#contact">Contact</a>
         <a  id="navelements" href="#education">Education</a>
         <a  id="navelements" href="#links">Blog</a>
         <a  id="navelements" href="#commentsection">Comment Section</a>
@@ -155,7 +155,7 @@ Mathematics
 </section>
 <section id="right">
 <section id="badges">
-<h5 id="header3"><a name="hobbies">Contact</a></h5>
+<h5 id="header3"><a name="contact">Contact</a></h5>
 <div>
 <section id="badgesbackground">
 
