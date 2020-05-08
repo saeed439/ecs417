@@ -1,6 +1,6 @@
 html, body, div, h1, h2, h3, h4, h5, p, aside, nav
 header, hgroup, li, ul, article, section, figure, 
-figurecaption, footer{
+figurecaption, footer, button{
  margin: 0;
  padding: 0;
  border: 0;
