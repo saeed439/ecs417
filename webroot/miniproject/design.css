@@ -103,10 +103,11 @@ background-color:#34495e;
 color:white;
 }
 #sidetext{
-color: #34495e; ;
-font-family:arial;
+color:#34495e;
+font-size:10px;
 margin:0.5rem;
-padding:1rem;
+text-decoration: none;
+
 }
 #educationtext{
 color: #34495e; ;
