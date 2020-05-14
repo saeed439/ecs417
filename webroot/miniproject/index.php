@@ -162,8 +162,10 @@ Mathematics
 
  <p id="sidetext">
   <ul>
-    <li class="otherskills">University email:<br>bt18673qmul.ac.uk</li>
+    <li class="otherskills">University email:<br>bt18673@qmul.ac.uk</li>
+    <br>
     <li class="otherskills">Number:<br>07877858873</li>
+    <br>
     <li class="otherskills">Personal email:<br>saeed345345@yahoo.com</li>
     
   </ul>
