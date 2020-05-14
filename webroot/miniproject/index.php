@@ -49,6 +49,7 @@ I decided to join the Arab and engineering society in queen mary as soon as i ca
 This experience taught me how to approach certain social situations and that there are different personality types.
 In addition, i always like joining football teams, as i was always passionate about football.
 Joining Queen Mary social league was unlike any other experience in my home town. It was more exciting playing in my first league.
+These experiences helped shape me as a person and gave me certain outlooks on life that I didnt before.
 
 
 
@@ -159,20 +160,13 @@ Mathematics
 <div>
 <section id="badgesbackground">
 
-<p id="sidetext">
-uni mail:
-<br>
-bt18673@qmul
-<br>
-<br>
-num:
-<br>
-07877858873
-<br>
-<br>
-personal mail:
-<br>
-saeed345345@
+ <p id="sidetext">
+  <ul>
+    <li class="otherskills">University email:<br>bt18673qmul.ac.uk</li>
+    <li class="otherskills">Number:<br>07877858873</li>
+    <li class="otherskills">Personal email:<br>saeed345345@yahoo.com</li>
+    
+  </ul>
 </p>
 
 </section>
