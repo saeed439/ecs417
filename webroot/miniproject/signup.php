@@ -28,7 +28,7 @@ $sql =  "INSERT INTO USER (username, password)
 
 $sql2= mysqli_query($conn, $sql);
 
- if ($sql2){
+ if ($sql2){ 
 
   header('Location:index.php');
 }
