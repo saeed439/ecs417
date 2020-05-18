@@ -10,14 +10,14 @@
 table{
 border-collapse: collapse;
 width:100%;
-color:#d96444;
+color:#34495e;
 font-family: monospace;
 font-size: 25px;
 text-align: left;
 }
 
 th{
-background-color:#d96444;
+background-color:#34495e;
 color:white;
 }
 tr:nth-child(even) {
